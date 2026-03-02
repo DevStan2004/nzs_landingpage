@@ -69,12 +69,12 @@ const Navbar = () => {
         ${isVisible ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 pointer-events-none"}`}
     >
             {/* TOP MARQUEE SECTION */}
-            <div className={`flex relative flex-col w-full group bg-majorgreen overflow-hidden p-6 transition-transform duration-300 ${!isAtTop ? "scale-0" : "scale-100"}`}>
-                <div className="flex justify-center items-center gap-3 p-5 w-full text-white absolute transition-transform duration-200 top-1/2 -translate-y-1/2 group-hover:-translate-y-[120%]">
-                    • <Link className='text-sm' href={''}>BECOME A VENDOR</Link> • <Link className='text-sm' href={''}>BECOME AN AGENT</Link> •
+            <div className={`flex relative flex-col w-full group bg-majorgreen overflow-hidden md:p-6 p-3 transition-transform duration-300 ${!isAtTop ? "scale-0" : "scale-100"}`}>
+                <div className="flex justify-center items-center gap-3 md:p-5 w-full text-white absolute transition-transform duration-200 top-1/2 -translate-y-1/2 group-hover:-translate-y-[120%]">
+                    • <Link className='md:text-sm text-[10px]' href={''}>BECOME A VENDOR</Link> • <Link className='md:text-sm text-[10px]' href={''}>BECOME AN AGENT</Link> •
                 </div>
-                <div className="flex justify-center items-center gap-3 p-5 w-full text-white absolute top-[120%] -translate-y-1/2 group-hover:top-[50%] transition-top duration-200">
-                    • <Link className='text-sm' href={''}>BECOME A VENDOR</Link> • <Link className='text-sm' href={''}>BECOME AN AGENT</Link> •
+                <div className="flex justify-center items-center gap-3 md:p-5 w-full text-white absolute top-[120%] -translate-y-1/2 group-hover:top-[50%] transition-top duration-200">
+                    • <Link className='md:text-sm text-[10px]' href={''}>BECOME A VENDOR</Link> • <Link className='md:text-sm text-[10px]' href={''}>BECOME AN AGENT</Link> •
                 </div>
             </div>
 
