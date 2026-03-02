@@ -8,6 +8,7 @@ import AnimatedText from './AnimatedText'
 import AnimatedButton from './AnimatedButton'
 import FlexCol from './FlexCol'
 import { Plus, Star, StarHalf } from 'lucide-react'
+import Link from 'next/link'
 
 type Props = {}
 
@@ -41,7 +42,7 @@ const FAQs = (props: Props) => {
         },
     ]
   return (
-    <GlobalContainer className='bg-superlightgreen flex flex-col gap-10 md:gap-20'>
+    <GlobalContainer className='bg-superlightgreen flex flex-col gap-10 md:gap-20 py-20'>
         <JustifyBetween className='items-start md:flex-row flex-col gap-5'>
             <div className="flex items-center gap-3 flex-shrink-0 md:w-[30%]">
                 <Question size={25} className='text-semimajorgreen' />
@@ -60,7 +61,9 @@ const FAQs = (props: Props) => {
                         <Image src={'https://framerusercontent.com/images/mCD1VlJCvIfXKjek5viuP2SafX4.jpeg?width=736&height=981'} className='w-17 h-18 object-cover rounded-xl' width={1000} height={1000} alt='image' />
                     </div>
                 </FlexCol>
-                <AnimatedButton padding='md:p-3 p-0' className='mt-' hover='bg-transparent text-semimajorgreen' text='Ask a question' add={<ArrowRight />} border />
+                <Link href={'/contact'}>
+                    <AnimatedButton padding='md:p-3 p-0' className='mt-5' hover='bg-transparent text-semimajorgreen' text='Ask a question' add={<ArrowRight />} border />
+                </Link>
             </FlexCol>
             <FlexCol>
                 {accordionArray.map((accordion, index) => (

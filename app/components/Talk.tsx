@@ -11,6 +11,7 @@ import { Plus, Star, StarHalf } from 'lucide-react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import ThreeColGrid from './ThreeColGrid'
+import Link from 'next/link'
 
 type Props = {}
 
@@ -143,7 +144,9 @@ const Talk = (props: Props) => {
                         </div>
                         <Plus size={30} strokeWidth={1} className="text-darkgray" />
                     </div>
-                    <AnimatedButton text="Leave a review" hover="hover:bg-semimajorgreen bg-majorgreen text-white text-center flex justify-center items-center rounded-full" />
+                    <Link href={'/contact'}>
+                        <AnimatedButton text="Leave a review" hover="hover:bg-semimajorgreen bg-majorgreen text-white text-center flex justify-center items-center rounded-full" />
+                    </Link>
                 </div>
                 <div className="flex flex-col gap-10 justify-between h-120 relative w-full">
                     <div className="flex flex-col gap-15">

@@ -12,6 +12,7 @@ import ThreeColGrid from './ThreeColGrid'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/all'
+import Link from 'next/link'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -85,7 +86,9 @@ const Pricing = (props: Props) => {
                 <div className="flex flex-col gap-10">
                     <div className="flex flex-col gap-3 border-b border-lightgray pb-3">
                         <p className="text-darkgray">N <span className='text-4xl font-semibold text-semimajorgreen'>6,500</span> /yr</p>
-                        <AnimatedButton text='Verify and begin' border hover='hover:bg-semimajorgreen bg-majorgreen text-white' className='flex justify-center items-center rounded-full' />
+                        <Link href={'/contact'}>
+                            <AnimatedButton text='Verify and begin' border hover='hover:bg-semimajorgreen bg-majorgreen text-white' className='flex justify-center items-center rounded-full' />
+                        </Link>
                     </div>
                     <div className="flex flex-col gap-5">
                         <p className="text-sm text-darkgray">Basic Search Listing</p>
@@ -106,7 +109,9 @@ const Pricing = (props: Props) => {
                 <div className="flex flex-col gap-10">
                     <div className="flex flex-col gap-3 border-b border-lightgray pb-3">
                         <p className="text-darkgray">N <span className='text-4xl font-semibold text-semimajorgreen'>50,000</span> /yr</p>
-                        <AnimatedButton text="Let's gooooo" border hover='hover:bg-semimajorgreen bg-majorgreen text-white' className='flex justify-center items-center rounded-full' />
+                        <Link href={'/contact'}>
+                            <AnimatedButton text="Let's gooooo" border hover='hover:bg-semimajorgreen bg-majorgreen text-white' className='flex justify-center items-center rounded-full' />
+                        </Link>
                     </div>
                     <div className="flex flex-col gap-5">
                         <p className="text-sm text-darkgray">Homepage Banner + Ad Credit</p>
@@ -123,7 +128,9 @@ const Pricing = (props: Props) => {
                         <p className="text-white">Market Movers</p>
                         <p className="text-3xl text-white">Need market dominance? <span className='text-lightgreen'>It's a click away.</span></p>
                     </div>
-                    <AnimatedButton border text='Get a tailored plan' className='flex justify-center rounded-full items-center' />
+                    <Link href={'/contact'}>
+                        <AnimatedButton border text='Get a tailored plan' className='flex justify-center rounded-full items-center' />
+                    </Link>
                 </div>
             </div>
         </ThreeColGrid>

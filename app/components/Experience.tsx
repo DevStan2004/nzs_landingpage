@@ -8,6 +8,7 @@ import JustifyBetween from './JustifyBetween'
 import { ArrowRight, Plus, StepForward } from 'lucide-react'
 import AnimatedText from './AnimatedText'
 import { Stairs } from '@phosphor-icons/react'
+import Link from 'next/link'
 
 type Props = {}
 
@@ -24,9 +25,15 @@ const Experience = (props: Props) => {
                 <div className="flex flex-col gap-10 md:my-20">
                     <p className="text-majorgray text-lg md:pe-62">We vet our vendors to ensure you get exactly what you se eon your screen. Our logistics network is optimized fo rthe unique terrain of our cities. Your money stays safe until you confirm that your order is perfect. Every purchase supports a local entrepreneur or a growing Nigerian brand.</p>
                     <div className="flex flex-col gap-5 items-start">
-                        <AnimatedButton className='text-white cursor-pointer' padding='p-0' hover='bg-transparent' add={<ArrowRight />} border  text='Sell your products now!' textClassname='text-white' />
-                        <AnimatedButton className='text-white cursor-pointer' padding='p-0' hover='bg-transparent' add={<ArrowRight />} border  text='Sell your products now!' textClassname='text-white' />
-                        <AnimatedButton className='text-white cursor-pointer' padding='p-0' hover='bg-transparent' add={<ArrowRight />} border  text='Sell your products now!' textClassname='text-white' />
+                        <Link href={"/contact"}>
+                            <AnimatedButton className='text-white cursor-pointer' padding='p-0' hover='bg-transparent' add={<ArrowRight />} border  text='Sell your products now!' textClassname='text-white' />
+                        </Link>
+                        <Link href={"/top_buys"}>
+                            <AnimatedButton className='text-white cursor-pointer' padding='p-0' hover='bg-transparent' add={<ArrowRight />} border  text='Earn as an agent in Naijazone' textClassname='text-white' />
+                        </Link>
+                        <Link href={"/our_story"}>
+                            <AnimatedButton className='text-white cursor-pointer' padding='p-0' hover='bg-transparent' add={<ArrowRight />} border  text='Shop your favorites now!' textClassname='text-white' />
+                        </Link>
                     </div>
                 </div>
                 <div className="flex flex-col gap-5 w-full">

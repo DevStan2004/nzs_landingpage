@@ -11,6 +11,7 @@ import { Plus, Star, StarHalf } from 'lucide-react'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { SplitText, ScrollTrigger } from 'gsap/all'
+import Link from 'next/link'
 gsap.registerPlugin(SplitText, ScrollTrigger)
 
 type Props = {}
@@ -85,7 +86,9 @@ const HomeAbout = (props: Props) => {
             </div>
             <FlexCol className='items-start'>
                 <AnimatedText textClass='md:text-5xl text-2xl font-bold' className='md:pe-20 tracking-tighter' text='Naijazone is a high-energy digital ecosystem designed to bring the hustle, the quality, and the soul of Nigerian trade to your doorstep. Searching for the latest local tech, bespoke Nigerian fabrics, or everyday essentials, we bridge the gap between local excellence and your convenience.' />
-                <AnimatedButton className='md:my-20 my-10' hover='bg-transparent' add={<ArrowRight />} border padding='md:p-3 p-0' text='More About Us' textClassname='text-majororange' />
+                <Link href={'/our_story'} className='mt-5'>
+                    <AnimatedButton className='md:my-20 my-10' hover='bg-transparent' add={<ArrowRight />} border padding='md:p-3 p-0' text='More About Us' textClassname='text-majororange' />
+                </Link>
                 <div className="grid md:grid-cols-[6fr_8fr] gap-3">
                     <div className="overflow-hidden w-full trigger-container1">
                         <div className="rounded-3xl bg-lightgreen p-5 flex flex-col gap-5 justify-between md:h-full h-[30rem] animate-green">
@@ -114,7 +117,9 @@ const HomeAbout = (props: Props) => {
                         <div className="flex justify-between flex-col p-5 rounded-3xl w-full md:h-[420px] h-[30rem] flex-shrink-0 bg-white animate-right">
                             <div className="flex justify-between md:flex-row flex-row-reverse">
                                 <Plus size={30} strokeWidth={1} className="text-majorgray" />
-                                <Image src={'https://framerusercontent.com/images/fPaJwt1QddTe1oMk68Dx3SN7B0.jpeg?width=690&height=964'} className='md:w-60 md:h-60 w-40 h-40 rounded-2xl object-cover' width={1000} height={1000} alt='image' />
+                                <Link href={"/product_details/home_office_furniture"}>
+                                    <Image src={'https://framerusercontent.com/images/fPaJwt1QddTe1oMk68Dx3SN7B0.jpeg?width=690&height=964'} className='md:w-60 md:h-60 w-40 h-40 rounded-2xl object-cover' width={1000} height={1000} alt='image' />
+                                </Link>
                             </div>
                             <div className="flex justify-between md:gap-20 items-end">
                                 <div className="flex flex-col gap-1">

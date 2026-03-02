@@ -86,7 +86,7 @@ const Navbar = () => {
                         <div className='animate-h1' style={{
                                 clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)"
                             }}>
-                            <span className={`md:text-6xl text-3xl font-bold flex relative ${pathname === "/" ? " text-semimajorgreen" : "text-majorgreen"} ${!isAtTop && "scale-0 text-semimajorgreen"} transition-transform duration-500 translate-h1 translate-y-20 `} >
+                            <span className={`md:text-6xl text-3xl font-bold flex relative ${pathname === "/" ?  " text-white" : "text-majorgreen"} ${!isAtTop && "scale-0 text-semimajorgreen"} transition-transform duration-500 translate-h1 translate-y-20 `} >
                                 naijazone <sup className='text-5xl absolute -right-8 -top-1'>®</sup>
                             </span>
                         </div>

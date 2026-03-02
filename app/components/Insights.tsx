@@ -8,6 +8,7 @@ import AnimatedText from './AnimatedText'
 import AnimatedButton from './AnimatedButton'
 import FlexCol from './FlexCol'
 import { Plus, Star, StarHalf } from 'lucide-react'
+import Link from 'next/link'
 
 type Props = {}
 
@@ -29,12 +30,24 @@ const Insights = (props: Props) => {
                 <p className="text-darkgray md:w-[30%] flex-shrink-0">We didn't just want a website; we wanted a community</p>
                 <FlexCol className='items-start'>
                     <div className="grid md:grid-cols-2 gap-3">
-                        <div className="flex flex-col gap-3">
-                            <Image src={'https://framerusercontent.com/images/mWc9Inm54BBqOVLcl2VqF7eWDaI.png?scale-down-to=512&width=1408&height=768'} width={1000} height={1000} alt='image' className='w-full rounded-3xl h-120 object-cover' />
+                        <div className="flex flex-col gap-3 group">
+                            <Link href={"/product_details/why_made_in_nigeria"}>
+                                <div className="overflow-hidden rounded-3xl">
+                                    <Image src={'https://framerusercontent.com/images/mWc9Inm54BBqOVLcl2VqF7eWDaI.png?scale-down-to=512&width=1408&height=768'} width={1000} height={1000} alt='image' className='w-full rounded-3xl h-120 object-cover group-hover:scale-120' style={{
+                                        transition: "scale 1s cubic-bezier(1, 0, 0.3, 1.5)"
+                                    }} />
+                                </div>
+                            </Link>
                             <p className="text-lg font-semibold">Why "Made in Nigeria" is the Smartest Choice for your Wallet in 2026</p>
                         </div>
-                        <div className="flex flex-col gap-3">
-                            <Image src={'https://framerusercontent.com/images/OIXmQsjcmGTwkLFr7AvPXkZn0.jpeg?scale-down-to=1024&width=736&height=1104'} width={1000} height={1000} alt='image' className='w-full rounded-3xl h-92 object-cover' />
+                        <div className="flex flex-col gap-3 group">
+                            <Link href={"/product_details/home_office_essentials"}>
+                                <div className="overflow-hidden rounded-3xl">
+                                    <Image src={'https://framerusercontent.com/images/OIXmQsjcmGTwkLFr7AvPXkZn0.jpeg?scale-down-to=1024&width=736&height=1104'} width={1000} height={1000} alt='image' className='w-full rounded-3xl h-92 object-cover group-hover:scale-120' style={{
+                                        transition: "scale 1s cubic-bezier(1, 0, 0.3, 1.5)"
+                                    }} />
+                                </div>
+                            </Link>
                             <p className="text-lg font-semibold">Home & Office Essentials to Upgrade Your Space This year</p>
                         </div>
                     </div>

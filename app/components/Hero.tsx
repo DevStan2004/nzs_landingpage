@@ -8,6 +8,7 @@ import homeOfficeFurniture from '@/app/src/images/homeOfficeFurniture.png'
 import { useGSAP } from '@gsap/react'
 import { SplitText } from 'gsap/all'
 import gsap from 'gsap'
+import Link from 'next/link'
 gsap.registerPlugin(SplitText)
 
 type Props = {}
@@ -79,7 +80,9 @@ const Hero = (props: Props) => {
                 <p className="text-white split-word md:text-[22px] ">Swift "Vendor-Buyer" Deiver</p>
                 <p className="text-lightgreen split-word md:text-[22px]  leading-6">Secure Escrow Payments. <br /> Community-Driven</p>
             </div>
-            <AnimatedButton border text={'Shop Now!'} className='rounded-full px-5' />
+            <Link href={'https://naijazoneonline.com/shop'} className='mt-5'>
+                <AnimatedButton justifyBetween='justify-center' border text={'Shop Now!'} className='rounded-full px-5' />
+            </Link>
         </FlexCol>
         <FlexCol className='w-80 relative z-1 md:flex hidden'>
             <div className='animate-h1' style={{
@@ -87,12 +90,13 @@ const Hero = (props: Props) => {
                 }}>
                 <h1 className='text-4xl font-bold text-white translate-y-100 translate-h1'>The Heart of Nigerian Markets</h1>
             </div>
-            <div className="w-full h-65 flex flex-col justify-end p-3 rounded-2xl overflow-hidden relative gap-2 animate-image">
+            
+            <Link href={"/product_details/home_office_furniture"} className="w-full h-65 flex flex-col justify-end p-3 rounded-2xl overflow-hidden relative gap-2 animate-image">
                 <div className="w-full h-full absolute top-0 left-0 bg-gradient-to-t from-black/50 to-black/30 z-1"></div>
                 <Image src={homeOfficeFurniture} width={1000} height={1000} alt='home / office furniture' className='w-full h-full object-cover absolute left-0 top-0' />
                 <p className="font-bold text-xl text-white relative z-1">Home & Office Furniture</p>
                 <p className="font-bold text-white/70 relative z-1">Handcrafted furniture that blends local artistry with modern ergonomic standards.</p>
-            </div>
+            </Link>
         </FlexCol>
     </GlobalContainer>
   )

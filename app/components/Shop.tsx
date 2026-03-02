@@ -7,6 +7,7 @@ import FlexCol from './FlexCol'
 import { UsersThreeIcon } from '@phosphor-icons/react'
 import JustifyBetween from './JustifyBetween'
 import GlobalContainer from './GlobalContainer'
+import Link from 'next/link'
 
 type Props = {}
 
@@ -25,7 +26,9 @@ const Shop = (props: Props) => {
                 </div>
                 <div className="flex flex-col gap-10 items-start">
                     <p className="text-darkgray md:text-xl md:pe-90 pe-30">Our Mission: To become the primary engine for SMEs in West Africa, providing the tools fo rany Nigerian with a product and a dream to scale globally.</p>
-                    <AnimatedButton className='rounded-full' hover='hover:bg-semimajorgreen bg-majorgreen text-white' border  text='Shop all categories' />
+                    <Link href={'/top_buys'}>
+                        <AnimatedButton className='rounded-full' hover='hover:bg-semimajorgreen bg-majorgreen text-white' border  text='Shop all categories' />
+                    </Link>
                 </div>
             </FlexCol>
         </JustifyBetween>

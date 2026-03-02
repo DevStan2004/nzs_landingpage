@@ -12,7 +12,7 @@ type Props = {}
 
 const WhoWeAre = (props: Props) => {
   return (
-    <GlobalContainer className='py-20'>
+    <GlobalContainer  className='py-20'>
         <JustifyBetween className='items-start md:flex-row flex-col gap-5'>
             <div className="flex items-center gap-3 flex-shrink-0 md:w-[33%]">
                 <UsersThreeIcon size={25} className='text-semimajorgreen' />
@@ -31,7 +31,7 @@ const WhoWeAre = (props: Props) => {
                 <Plus className='text-darkgray' size={25} strokeWidth={1}  />
                 <Plus className='text-darkgray' size={25} strokeWidth={1}  />
             </div>
-            <div className="grid md:grid-cols-2 gap-2">
+            <div className="grid grid-cols-2 gap-2">
                 <TeamCard name='Chioma Nsofor' position='Managing Director' />
                 <TeamCard name='Emmanuel Lucky' position='Chief Technical Officer' src={'https://framerusercontent.com/images/bOIZXmiygUTcwJJBQLioR2waj4w.png?scale-down-to=1024&width=1583&height=2163'} />
                 <TeamCard name='Adebayo Alpha' position='Chief Branding Officer' src={'https://framerusercontent.com/images/TLfkF5D2LlsZfyivdYreaV7iy7A.png?scale-down-to=1024&width=1583&height=2163'} />

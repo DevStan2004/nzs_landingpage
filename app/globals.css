@@ -20,4 +20,15 @@
 
 body{
   font-family: var(--font-inter);
+  scroll-behavior: smooth;
+}
+
+th{
+  border: 1px solid gray;
+  padding: 10px;
+}
+
+td{
+  border: 1px solid gray;
+  padding: 10px;
 }

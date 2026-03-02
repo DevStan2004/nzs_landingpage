@@ -7,9 +7,10 @@ gsap.registerPlugin(ScrollTrigger)
 type Props = {
     className?: string
     children: ReactNode
+    id?: string
 }
 
-const GlobalContainer = ({className, children}: Props) => {
+const GlobalContainer = ({className, children, id}: Props) => {
     const globalRef = useRef<HTMLDivElement>(null)
 
     useGSAP(() => {
@@ -26,7 +27,7 @@ const GlobalContainer = ({className, children}: Props) => {
         })
     })
   return (
-    <div ref={globalRef} className={`md:px-10 px-5 ${className}`}>{children}</div>
+    <div id={id} ref={globalRef} className={`md:px-10 px-5 ${className}`}>{children}</div>
   )
 }
 

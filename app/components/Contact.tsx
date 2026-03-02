@@ -8,19 +8,22 @@ import AnimatedText from './AnimatedText'
 import AnimatedButton from './AnimatedButton'
 import FlexCol from './FlexCol'
 import { Plus, Star, StarHalf } from 'lucide-react'
+import { usePathname } from 'next/navigation'
 
 type Props = {}
 
 const Contact = (props: Props) => {
-   
+   const pathname = usePathname()
   return (
     <GlobalContainer className='relative flex flex-col gap-20 py-40'>
-        <Image src={'https://framerusercontent.com/images/CibWmm5zwvArzwXcekYVZYYA01I.jpeg?width=736&height=920'} width={1000} height={1000} alt='image' className='w-full h-full absolute left-0 top-0 object-cover brightness-25' />
-        <div className="bg-gradient-to-t from-majorgreen/50 to-black/50 absolute left-0 top-0 w-full h-full"></div>
+        {pathname === '/404' ? null : (
+            <Image src={'https://framerusercontent.com/images/CibWmm5zwvArzwXcekYVZYYA01I.jpeg?width=736&height=920'} width={1000} height={1000} alt='image' className='w-full h-full absolute left-0 top-0 object-cover brightness-25' />
+        )}
+        <div className={`${pathname === "/404" ? "bg-black" : "bg-gradient-to-t from-majorgreen/50 to-black/50"} absolute left-0 top-0 w-full h-full`}></div>
         <JustifyBetween className='items-start md:flex-row flex-col gap-5 relative'>
             <div className="flex items-center gap-3 flex-shrink-0 md:w-[30%]">
-                <BookOpenIcon size={25} className='text-semimajorgreen' />
-                <p className="text-semimajorgreen font-semibold">Contact</p>
+                <BookOpenIcon size={25} className={`${pathname === "/404" ? "text-white" : "text-semimajorgreen"}`} />
+                <p className={`${pathname === "/404" ? "text-white" : "text-semimajorgreen font-semibold"}`}>Contact</p>
             </div>
             <FlexCol className='items-start' gap='gap-20'>
                 <AnimatedText textClass='md:text-5xl text-2xl' changeColor='white' className='md:pe-20 tracking-tighter' text="We're always onlie: Naijazone is desined to tackle these challenges head-on, providing a seamless experience for both vendors and consumers. "/>
@@ -41,7 +44,7 @@ const Contact = (props: Props) => {
                         Message *
                         <textarea rows={5} placeholder='Tell us more' className="border-b py-3 border-majorgray" ></textarea>
                     </label>
-                    <AnimatedButton justifyBetween='justify-center' left='left-1/2 -translate-x-1/2' text='Send Message' className='flex justify-center items-center rounded-full' border />
+                    <AnimatedButton hover={`${pathname === "/404" ? "bg-white text-black hover:bg-black hover:text-white" : ""}`} justifyBetween='justify-center' left='left-1/2 -translate-x-1/2' text='Send Message' className='flex justify-center items-center rounded-full' border />
                 </form>
             </FlexCol>
         </JustifyBetween>
